@@ -1,10 +1,10 @@
 package hw4;
 
 interface MobilePhone {
-    boolean sendCall();
-    boolean receiveCall();
-    boolean sendSMS();
-    boolean receiveSMS();
+    void sendCall();
+    void receiveCall();
+    void sendSMS();
+    void receiveSMS();
 }
 
 interface MP3 {
@@ -20,44 +20,28 @@ class PDA {
 
 class SmartPhone extends PDA implements MobilePhone, MP3 {
     @Override
-    public boolean sendCall() {
-        System.out.println("전화 걸기");
-        return true;
-    }
+    public void sendCall() { System.out.println("전화 걸기"); }
 
     @Override
-    public boolean receiveCall() {
-        System.out.println("전화 받기");
-        return true;
-    }
+    public void receiveCall() { System.out.println("전화 받기"); }
 
     @Override
-    public boolean sendSMS() {
-        System.out.println("SMS 보내기");
-        return true;
-    }
+    public void sendSMS() { System.out.println("SMS 보내기"); }
 
     @Override
-    public boolean receiveSMS() {
-        System.out.println("SMS 받기");
-        return true;
-    }
+    public void receiveSMS() { System.out.println("SMS 받기"); }
 
     @Override
-    public void play() {
-        System.out.println("음악 재생");
-    }
+    public void play() { System.out.println("음악 재생"); }
 
     @Override
-    public void stop() {
-        System.out.println("재생 중지");
-    }
+    public void stop() { System.out.println("재생 중지"); }
 
-    void scheduler() {
+    public void scheduler() {
         System.out.println("일정 관리");
     }
 
-    void applicationManager() {
+    public void applicationManager() {
         System.out.println("어플리케이션 삽입/삭제");
     }
 }
