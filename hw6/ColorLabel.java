@@ -15,7 +15,7 @@ public class ColorLabel extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         setLayout(new GridLayout(4, 4));
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < 16; i++) {
             label[i] = new JLabel(Integer.toString(i));
             label[i].setBackground(color[i]);
             label[i].setOpaque(true);
